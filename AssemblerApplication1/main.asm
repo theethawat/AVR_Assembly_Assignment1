@@ -23,8 +23,8 @@
 Start:	ldi VAR_A,0b00000011; PB0
 		out DDRB,VAR_A
 	
-		ldi VAR_A,0b00001100 ; PB1
-		out DDRB,VAR_A
+		ldi VAR_B,0b00001100 ; PB1
+		out DDRB,VAR_B
 
 		;ldi VAR_Bl,0xfc ; PB2
 		;out DDRB,VAR_Bl
@@ -36,13 +36,13 @@ Start:	ldi VAR_A,0b00000011; PB0
 		;out DDRC,Temp
 		;out PortC,Temp
 		
-
-		in VAR_A,PinB
-		in VAR_B,PinB
+		
+		;in VAR_A,PinB
+		;in VAR_B,PinB
 		;in VAR_Bh,PinB
 		;in VAR_Bl,PinB
-
-		add VAR_A,VAR_B
+		mov VAR_Answer,VAR_A
+		add VAR_Answer,VAR_B
 		
 		mov temp,VAR_A
 		out DDRC,VAR_A
