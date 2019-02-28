@@ -6,11 +6,10 @@
 ; Thank you : https://www.instructables.com/id/Command-Line-Assembly-Language-Programming-for-Ard/
 
 .INCLUDE "m328Pdef.inc"
-.DEF VAR_Al = r16
-.DEF VAR_Ah = r17
-.DEF VAR_Bl = r18
-.DEF VAR_Bh = r19
-.DEF Temp = r20
+.DEF VAR_A = r16
+.DEF VAR_B = r17
+.DEF VAR_Answer = r18
+.DEF Temp = r29
 
 .CSEG ; Code
 		; 1 = out 0 = in  F=1111 FF=11111111
@@ -21,32 +20,33 @@
 .ORG    0x00
 		rjmp Start
 
-Start:	ldi VAR_Al,0xfe ; PB0
-		out DDRB,VAR_Al
+Start:	ldi VAR_A,0b00000011; PB0
+		out DDRB,VAR_A
 	
-		ldi VAR_Ah,0xfd ; PB1
-		out DDRB,VAR_Ah
+		ldi VAR_A,0b00001100 ; PB1
+		out DDRB,VAR_A
 
-		ldi VAR_Bl,0xfc ; PB2
-		out DDRB,VAR_Bl
+		;ldi VAR_Bl,0xfc ; PB2
+		;out DDRB,VAR_Bl
 	
-		ldi VAR_Bh,0xfb ; PB3
-		out DDRB,VAR_Bh
+		;ldi VAR_Bh,0xfb ; PB3
+		;out DDRB,VAR_Bh
 
-		ldi Temp,0b00000011 ;PC0
-		out DDRC,Temp
-		out PortC,Temp
+		;ldi Temp,0b00000011 ;PC0
+		;out DDRC,Temp
+		;out PortC,Temp
 		
 
-		in VAR_Ah,PinB
-		in VAR_Al,PinB
-		in VAR_Bh,PinB
-		in VAR_Bl,PinB
+		in VAR_A,PinB
+		in VAR_B,PinB
+		;in VAR_Bh,PinB
+		;in VAR_Bl,PinB
 
-		add VAR_Al,VAR_Bl
-		adc VAR_Ah,VAR_Bh
+		add VAR_A,VAR_B
 		
-		cpi VAR_Al,1
+		mov temp,VAR_A
+		out DDRC,VAR_A
+		out PortC,VAR_A
 		
 
 

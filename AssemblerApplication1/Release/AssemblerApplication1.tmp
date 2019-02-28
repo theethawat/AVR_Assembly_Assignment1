@@ -23,6 +23,6 @@
   <FILE>AssemblerApplication1.lss</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <Start><FILE>D:\A Tin 2019\MicroController\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>24</LINE></Start>
+  <Start><FILE>D:\A Tin 2019\MicroController\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>23</LINE></Start>
  </LABELS>
 </ASSEMBLER_INFO>

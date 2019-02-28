@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.7  D:\A Tin 2019\MicroController\AssemblerApplication1\AssemblerApplication1\main.asm Thu Feb 28 23:35:57 2019
+AVRASM ver. 2.2.7  D:\A Tin 2019\MicroController\AssemblerApplication1\AssemblerApplication1\main.asm Thu Feb 28 23:49:55 2019
 
 
 EQU  SIGNATURE_000 0000001e
@@ -695,9 +695,8 @@ EQU  ACIaddr      0000002e
 EQU  TWIaddr      00000030
 EQU  SPMRaddr     00000032
 EQU  INT_VECTORS_SIZE 00000034
-DEF  VAR_Al       r16
-DEF  VAR_Ah       r17
-DEF  VAR_Bl       r18
-DEF  VAR_Bh       r19
-DEF  Temp         r20
+DEF  VAR_A        r16
+DEF  VAR_B        r17
+DEF  VAR_Answer   r18
+DEF  Temp         r29
 CSEG Start        00000001
