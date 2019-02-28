@@ -37,16 +37,16 @@ Start:	ldi VAR_A,0b00000011; PB0
 		;out PortC,Temp
 		
 		
-		;in VAR_A,PinB
-		;in VAR_B,PinB
+		in VAR_A,PinB
+		in VAR_B,PinB
 		;in VAR_Bh,PinB
 		;in VAR_Bl,PinB
 		mov VAR_Answer,VAR_A
 		add VAR_Answer,VAR_B
 		
-		mov temp,VAR_A
-		out DDRC,VAR_A
-		out PortC,VAR_A
+		mov temp,VAR_Answer
+		out DDRC,temp
+		out PortC,temp
 		
 
 
