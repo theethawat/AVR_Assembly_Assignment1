@@ -20,7 +20,8 @@
 .ORG    0x00
 		rjmp Start
 
-Start:	ldi VAR_A,0b11111100; PB0
+Start:	clr temp
+		ldi VAR_A,0b11111100; PB0
 		out DDRB,VAR_A
 	
 		ldi VAR_B,0b11110011 ; PB1
@@ -36,20 +37,22 @@ Start:	ldi VAR_A,0b11111100; PB0
 		;out DDRC,Temp
 		;out PortC,Temp
 		
-		
+	
 		in VAR_A,PinB
 		in VAR_B,PinB
 		;in VAR_Bh,PinB
 		;in VAR_Bl,PinB
+		lsr VAR_B
+		lsr VAR_B
 		mov VAR_Answer,VAR_A
 		add VAR_Answer,VAR_B
 		
-		mov temp,VAR_B
+		mov temp,VAR_Answer
 		out DDRC,temp
 		out PortC,temp
 		rjmp Start
 
-
+		
 
 .DSEG ; Data
 .ESEG ; EEprom
