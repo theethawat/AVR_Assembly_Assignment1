@@ -20,10 +20,10 @@
 .ORG    0x00
 		rjmp Start
 
-Start:	ldi VAR_A,0b00000011; PB0
+Start:	ldi VAR_A,0b11111100; PB0
 		out DDRB,VAR_A
 	
-		ldi VAR_B,0b00001100 ; PB1
+		ldi VAR_B,0b11110011 ; PB1
 		out DDRB,VAR_B
 
 		;ldi VAR_Bl,0xfc ; PB2
