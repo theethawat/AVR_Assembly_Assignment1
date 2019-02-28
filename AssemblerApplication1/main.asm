@@ -44,10 +44,10 @@ Start:	ldi VAR_A,0b00000011; PB0
 		mov VAR_Answer,VAR_A
 		add VAR_Answer,VAR_B
 		
-		mov temp,VAR_Answer
+		mov temp,VAR_A
 		out DDRC,temp
 		out PortC,temp
-		
+		rjmp Start
 
 
 

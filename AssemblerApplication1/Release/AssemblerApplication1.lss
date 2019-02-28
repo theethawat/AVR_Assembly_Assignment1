@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.7  D:\A Tin 2019\MicroController\AssemblerApplication1\AssemblerApplication1\main.asm Thu Feb 28 23:58:13 2019
+AVRASM ver. 2.2.7  D:\A Tin 2019\MicroController\AssemblerApplication1\AssemblerApplication1\main.asm Fri Mar 01 00:11:46 2019
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\avrasm\inc\m328pdef.inc'
 D:\A Tin 2019\MicroController\AssemblerApplication1\AssemblerApplication1\main.asm(8): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\avrasm\inc\m328Pdef.inc'
@@ -1079,7 +1079,7 @@ D:\A Tin 2019\MicroController\AssemblerApplication1\AssemblerApplication1\main.a
 000009 2fd2                      		mov temp,VAR_Answer
 00000a b9d7                      		out DDRC,temp
 00000b b9d8                      		out PortC,temp
-                                 		
+00000c cff4                      		rjmp Start
                                  
                                  
                                  
@@ -1139,7 +1139,7 @@ fmulsu:   0 icall :   0 ijmp  :   0 in    :   2 inc   :   0 jmp   :   0
 ld    :   0 ldd   :   0 ldi   :   2 lds   :   0 lpm   :   0 lsl   :   0 
 lsr   :   0 mov   :   2 movw  :   0 mul   :   0 muls  :   0 mulsu :   0 
 neg   :   0 nop   :   0 or    :   0 ori   :   0 out   :   4 pop   :   0 
-push  :   0 rcall :   0 ret   :   0 reti  :   0 rjmp  :   1 rol   :   0 
+push  :   0 rcall :   0 ret   :   0 reti  :   0 rjmp  :   2 rol   :   0 
 ror   :   0 sbc   :   0 sbci  :   0 sbi   :   0 sbic  :   0 sbis  :   0 
 sbiw  :   0 sbr   :   0 sbrc  :   0 sbrs  :   0 sec   :   0 seh   :   0 
 sei   :   0 sen   :   0 ser   :   0 ses   :   0 set   :   0 sev   :   0 
@@ -1150,7 +1150,7 @@ Instructions used: 6 out of 113 (5.3%)
 "ATmega328P" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x000018     24      0     24   32768   0.1%
+[.cseg] 0x000000 0x00001a     26      0     26   32768   0.1%
 [.dseg] 0x000100 0x000100      0      0      0    2048   0.0%
 [.eseg] 0x000000 0x000000      0      0      0    1024   0.0%
 
